@@ -1,4 +1,4 @@
-# PetroPulse 2.0 — Oilfield Production & Loss Intelligence System
+
 
 
 
