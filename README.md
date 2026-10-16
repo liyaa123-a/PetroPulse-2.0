@@ -1,6 +1,6 @@
 # PetroPulse 2.0 — Oilfield Production & Loss Intelligence System
 
-PAT 4 project. Compare **planned vs actual** oil production, see the **estimated financial impact** of shortfalls, track wells, targets and rule-based alerts — with every user's data stored in **Oracle**.
+
 
 ```
  React + TypeScript (Vercel)  ──HTTPS──►  Flask REST API (Render)  ──oracledb, TLS/wallet──►  Oracle Autonomous Database
