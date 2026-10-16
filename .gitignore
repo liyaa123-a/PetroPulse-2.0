@@ -1,0 +1,35 @@
+# secrets and credentials - NEVER commit these
+.env
+.env.*
+!.env.example
+!.env.development
+*.pem
+*.p12
+*.sso
+*.jks
+wallet/
+Wallet_*/
+Wallet_*.zip
+cwallet.sso
+ewallet.*
+tnsnames.ora
+sqlnet.ora
+# python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# node
+node_modules/
+dist/
+# local databases and misc
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+*.log
+
+# PetroPulse local backups and environment files
+*.oracle-backup
+.env.development

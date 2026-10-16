@@ -1,0 +1,29 @@
+# Render Blueprint. Secrets are marked sync:false - you type them in the Render dashboard; they are never stored in Git.
+services:
+  - type: web
+    name: petropulse-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -c gunicorn.conf.py wsgi:app
+    healthCheckPath: /api/health/live
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: ORACLE_USER
+        sync: false
+      - key: ORACLE_PASSWORD
+        sync: false
+      - key: ORACLE_DSN
+        sync: false
+      - key: ORACLE_WALLET_DIR
+        value: /etc/secrets
+      - key: ORACLE_WALLET_PASSWORD
+        sync: false
